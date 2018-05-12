@@ -3,8 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { resetNavigation } from './NavigationHelper';
 import FullScreenLoading from '../ui/FullScreenLoading';
+import { NavigationActions } from 'react-navigation';
 
-class ReRouter extends React.Component {
+export default class InitialRouter extends React.Component {
     static navigationOptions = {
       title: 'InitialRouter',
     };
@@ -29,11 +30,10 @@ class ReRouter extends React.Component {
 }
 
 
-ReRouter.propTypes = {
+InitialRouter.propTypes = {
   navigation: PropTypes.object.isRequired,
-  userID: PropTypes.string.isRequired,
 };
 
-ReRouter.defaultProps = {
+InitialRouter.defaultProps = {
 
 };
