@@ -13,7 +13,19 @@ npm test
 
 #Styling & theme
 Native base
+```$xslt
+yarn add native-base
+```
 custom config file
+```$xslt
+yarn add react-native-swiper
+```
+
+#Navigation
+react navigation
+```$xslt
+yarn add react-navigation
+```
 
 #Code Style & quality
 Airbnb Linter
@@ -21,7 +33,7 @@ Airbnb Linter
 yarn add eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint --dev
 ```
 
-Prettier
+Prettier https://stackoverflow.com/questions/46201647/prettier-airbnbs-eslint-config
 ## Flow
 https://medium.com/react-native-training/getting-started-with-react-native-and-flow-d40f55746809
 ```
@@ -40,8 +52,6 @@ persist
 #Marketing
 Analytics
 Push Notifications
-
-
 
 
 # Server config
