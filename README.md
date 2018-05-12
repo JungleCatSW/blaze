@@ -46,6 +46,7 @@ Push Notifications
 
 # Server config
 plugin
+react native render html
 
 #Image and video caching
 
