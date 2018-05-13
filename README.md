@@ -21,6 +21,10 @@ custom config file
 yarn add react-native-swiper
 ```
 
+custom colors - basic
+custom themeing
+custom fonts...
+
 #Navigation
 react navigation
 ```$xslt
@@ -71,4 +75,6 @@ Enzyme
 #CI/CD
 App Center
 
+
+images are from here https://www.pexels.com/search/clothes/
 

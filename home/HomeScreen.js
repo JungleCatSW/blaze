@@ -4,6 +4,10 @@ import { View } from 'react-native';
 import { Text } from 'native-base';
 import Anatomy from '../ui/Anatomy';
 import { HomeDrawer } from './HomeDrawer';
+import PromoTagCard from '../Cards/PromoTagCard';
+import {features1, features2, promo} from './mockData';
+import FeatureTagCard from "../Cards/FeatureTagCard";
+import {paddingMedium} from "../config/Styles";
 
 
 const mainDrawerRoutes = [
@@ -43,9 +47,8 @@ type Props = {
     navigation: any,
 };
 
+
 export default class HomeScreen extends React.Component<Props> {
-
-
   navigateToRoute = (route : string) => {
     this.props.navigation.navigate(route);
   };
@@ -60,7 +63,25 @@ export default class HomeScreen extends React.Component<Props> {
           navigateToRoute={this.navigateToRoute}
         />}
       >
-        <Text>HomeScreen</Text>
+        <View style={{paddingBottom:paddingMedium }}>
+          <PromoTagCard
+            tag={promo[0].tag}
+            navigateToTag={() => {}}
+            image={promo[0].image}
+          />
+          <PromoTagCard
+            tag={promo[1].tag}
+            navigateToTag={() => {}}
+            image={promo[1].image}
+          />
+          <FeatureTagCard features={features1} navigateToTag={()=>{}} />
+            <FeatureTagCard features={features2} navigateToTag={()=>{}} />
+            <PromoTagCard
+                tag={promo[2].tag}
+                navigateToTag={() => {}}
+                image={promo[2].image}
+            />
+        </View>
       </Anatomy>
     );
   }
