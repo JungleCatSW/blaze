@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Header, Body, Title, Right, Left, Button, Icon, View, Text, H1, Drawer } from 'native-base';
 import { NavigationActions } from 'react-navigation';
 import { getStatusBarHeight } from '../helpers/StatusBarHeight';
+import { appStyles } from '../config/AppColors';
 
 export default class AppHeader extends React.Component {
   constructor(props) {
@@ -20,20 +21,20 @@ export default class AppHeader extends React.Component {
 
     renderLeftButton() {
       let leftAction = this.defaultBackButtonAction;
-      let iconName = 'ios-arrow-back';
+      let iconName = 'arrow-back';
       if (this.props.leftButtonIsDrawer) {
-        leftAction = this.props.drawerButtonAction.open;
-        iconName = 'md-menu';
+        leftAction = this.props.drawerButtonAction;
+        iconName = 'menu';
       }
       if (this.props.showLeftButton) {
         return (
           <Button
             transparent
-            style={{ alignSelf: 'center' }}
+            style={{ alignSelf: 'center',  }}
             light
             onPress={leftAction}
           >
-            <Icon name={iconName} style={{ fontSize: 32 }} />
+            <Icon name={iconName} style={{ fontSize: 32, color: appStyles.headerBarIconColor }} />
           </Button>
         );
       }
@@ -44,12 +45,11 @@ export default class AppHeader extends React.Component {
     renderSearch() {
       return (
         <Button
-          style={{ alignSelf: 'center' }}
+          style={{ alignSelf: 'center'}}
           transparent
-
           onPress={() => {}}
         >
-          <Icon name="md-search" style={{ fontSize: 32 }} />
+          <Icon name="search" style={{ fontSize: 32 , color: appStyles.headerBarIconColor }} />
         </Button>
       );
     }
@@ -60,12 +60,13 @@ export default class AppHeader extends React.Component {
           <View
             style={{
             height: getStatusBarHeight(),
-            backgroundColor: 'red',
+            backgroundColor: appStyles.statusBarColor,
+                color: appStyles.statusBarIconColor,
           }}
           />
           <Header
-            style={{ backgroundColor: this.props.color }}
-            androidStatusBarColor="red"
+            style={{ backgroundColor: appStyles.headerBarColor }}
+            androidStatusBarColor={appStyles.statusBarColor}
           >
             <View
               style={{
@@ -78,7 +79,7 @@ export default class AppHeader extends React.Component {
               {this.renderLeftButton()}
               <H1
                 style={{
-                  color: 'black',
+                  color: appStyles.headerBarIconColor,
                   fontSize: 25,
                   margin: 0,
                   fontWeight: 'normal',
@@ -97,7 +98,7 @@ export default class AppHeader extends React.Component {
 
 AppHeader.propTypes = {
   title: PropTypes.string.isRequired,
-  color: PropTypes.string,
+
   navigation: PropTypes.object.isRequired,
   showLeftButton: PropTypes.bool.isRequired,
 

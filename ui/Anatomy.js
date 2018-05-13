@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import PropTypes from 'prop-types';
+import { View } from 'react-native';
 import {
   Container,
   Content,
@@ -15,12 +16,22 @@ import {
 import { NavigationActions } from 'react-navigation';
 import AppHeader from './AppHeader';
 
+const defaultDrawerContent = <View style={{ backgroundColor: 'white', flex: 1 }}><Text>Use drawerContent props to put something here</Text></View>;
+
 export default class Anatomy extends React.Component {
   constructor(props) {
     super(props);
     this.contentScroll = null;
-    this.drawer = {}
+    this.drawer = {};
   }
+
+  openDrawer = () => {
+    this.drawer._root.open();
+  };
+
+  closeDrawer = () => {
+    this.drawer._root.close();
+  };
 
   render() {
     const {
@@ -37,13 +48,13 @@ export default class Anatomy extends React.Component {
           this.drawer = ref;
         }}
         content={
-          <Text>Drawer</Text>
+         this.props.drawerContent
         }
         side={drawerSide}
       >
         <AppHeader
           navigation={navigation}
-          drawerButtonAction={()=>{this.drawer._root}}
+          drawerButtonAction={this.openDrawer}
           leftButtonIsDrawer={this.props.leftButtonIsDrawer}
           showSearch={this.props.showSearch}
           showLeftButton={this.props.showLeftButton}
@@ -67,7 +78,8 @@ export default class Anatomy extends React.Component {
 Anatomy.propTypes = {
   children: PropTypes.element,
   title: PropTypes.string,
-  drawerSide: PropTypes.string,
+  drawerSide: PropTypes.string, // which side of the screen to show the drawer (left or right)
+  drawerContent: PropTypes.element, // The react element with content for the drawer
   leftButtonIsDrawer: PropTypes.bool,
   showLeftButton: PropTypes.bool,
   showSearch: PropTypes.bool,
@@ -80,5 +92,6 @@ Anatomy.defaultProps = {
   leftButtonIsDrawer: false,
   showLeftButton: true,
   showSearch: true,
+  drawerContent: defaultDrawerContent,
 };
 
