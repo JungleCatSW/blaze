@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
@@ -13,7 +14,7 @@ const mainDrawerRoutes = [
     icon: 'home',
   },
   {
-    label: 'Cart',
+    label: 'My Cart',
     route: 'CartScreen',
     icon: 'cart',
   },
@@ -39,12 +40,14 @@ const mainDrawerRoutes = [
   },
 ];
 
-export default class HomeScreen extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+type Props = {
+    navigation: any,
+};
 
-  navigateToRoute = (route) => {
+export default class HomeScreen extends React.Component<Props> {
+
+
+  navigateToRoute = (route : string) => {
     this.props.navigation.navigate(route);
   };
 
@@ -52,12 +55,14 @@ export default class HomeScreen extends React.Component {
     return (
       <Anatomy
         leftButtonIsDrawer
+        navigation={this.props.navigation}
         drawerContent={<HomeDrawer
           mainDrawerRoutes={mainDrawerRoutes}
           navigateToRoute={this.navigateToRoute}
         />}
       >
         <Text>HomeScreen</Text>
-      </Anatomy>);
+      </Anatomy>
+    );
   }
 }

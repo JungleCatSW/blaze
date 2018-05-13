@@ -1,4 +1,4 @@
-// @flow
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
@@ -83,6 +83,7 @@ Anatomy.propTypes = {
   leftButtonIsDrawer: PropTypes.bool,
   showLeftButton: PropTypes.bool,
   showSearch: PropTypes.bool,
+  navigation: PropTypes.object.isRequired,
 };
 
 Anatomy.defaultProps = {

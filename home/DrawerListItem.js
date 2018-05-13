@@ -11,10 +11,15 @@ const styles = StyleSheet.create({
     borderBottomColor: appStyles.separatorColor,
     borderBottomWidth: 1,
     flexDirection: 'row',
+    alignContent: 'center',
     padding: paddingMedium,
   },
   icon: {
     paddingRight: paddingMedium,
+    alignSelf: 'center',
+  },
+  label: {
+    alignSelf: 'center',
   },
 });
 
@@ -27,7 +32,7 @@ export default function DrawerListItem({
       onPress={() => { navigateToRoute(route); }}
     >
       <Icon name={icon} style={styles.icon} />
-      <H2>{label}</H2>
+      <H2 style={styles.label}>{label}</H2>
     </TouchableOpacity>
   );
 }

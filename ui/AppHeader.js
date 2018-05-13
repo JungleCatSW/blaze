@@ -61,7 +61,6 @@ export default class AppHeader extends React.Component {
             style={{
             height: getStatusBarHeight(),
             backgroundColor: appStyles.statusBarColor,
-                color: appStyles.statusBarIconColor,
           }}
           />
           <Header
