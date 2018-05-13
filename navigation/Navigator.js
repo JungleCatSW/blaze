@@ -7,6 +7,7 @@ export default StackNavigator({
 
   HomeScreen: { screen: HomeScreen },
   CartScreen: { screen: CartScreen},
+    ProductListScreen: { screen: ProductListScreen},
   InitialRouter: { screen: InitialRouter },
 }, {
   initialRouteName: 'InitialRouter',
