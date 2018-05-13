@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { H2, Icon } from 'native-base';
@@ -39,12 +40,4 @@ export default function DrawerListItem(props : Props) {
     </TouchableOpacity>
   );
 }
-
-
-DrawerListItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  route: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  navigateToRoute: PropTypes.func.isRequired,
-};
 

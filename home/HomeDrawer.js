@@ -1,7 +1,6 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
-import { H1, Icon } from 'native-base';
 import { appStyles } from '../config/AppColors';
 import DrawerBanner from './DrawerBanner';
 import DrawerListItem from './DrawerListItem';
@@ -21,16 +20,20 @@ const styles = StyleSheet.create({
   },
 });
 
+type Props = {
+    mainDrawerRoutes: Array<Object>,
+    navigateToRoute: Function,
+}
 
-export function HomeDrawer({ mainDrawerRoutes, navigateToRoute }) {
+export function HomeDrawer(props: Props) {
 // TODO add user model as props or connect via Apollo?
   return (
     <View style={styles.container}>
       <DrawerBanner />
-      {mainDrawerRoutes.map((drawerRoute) => {
+      {props.mainDrawerRoutes.map((drawerRoute) => {
           return (<DrawerListItem
             key={drawerRoute.route}
-            navigateToRoute={navigateToRoute}
+            navigateToRoute={props.navigateToRoute}
             route={drawerRoute.route}
             icon={drawerRoute.icon}
             label={drawerRoute.label}
@@ -39,9 +42,4 @@ export function HomeDrawer({ mainDrawerRoutes, navigateToRoute }) {
     </View>
   );
 }
-
-HomeDrawer.propTypes = {
-  mainDrawerRoutes: PropTypes.array.isRequired,
-  navigateToRoute: PropTypes.func.isRequired,
-};
 
