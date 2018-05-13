@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { H2, Icon } from 'native-base';
 import { appStyles } from '../config/AppColors';
@@ -23,16 +22,20 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function DrawerListItem({
-  label, route, icon, navigateToRoute,
-}) {
+type Props = {
+    label: string,
+    route: string,
+    icon: string,
+    navigateToRoute: Function,
+}
+export default function DrawerListItem(props : Props) {
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => { navigateToRoute(route); }}
+      onPress={() => { props.navigateToRoute(props.route); }}
     >
-      <Icon name={icon} style={styles.icon} />
-      <H2 style={styles.label}>{label}</H2>
+      <Icon name={props.icon} style={styles.icon} />
+      <H2 style={styles.label}>{props.label}</H2>
     </TouchableOpacity>
   );
 }

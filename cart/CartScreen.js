@@ -1,15 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { View } from 'react-native';
 import { Text } from 'native-base';
 import Anatomy from '../ui/Anatomy';
 
+type Props = {
+  navigation: any,
+}
 
-export default class CartScreen extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+export default class CartScreen extends React.Component<Props> {
   render() {
     return (
       <Anatomy
@@ -23,6 +20,3 @@ export default class CartScreen extends React.Component {
   }
 }
 
-CartScreen.propTypes = {
-  navigation: PropTypes.object.isRequired,
-}
