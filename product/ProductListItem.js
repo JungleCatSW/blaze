@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
-import { Text, H3 } from 'native-base';
+import { Text, H2,H3, Icon } from 'native-base';
 
 import { paddingMedium, paddingSmall } from '../config/Styles';
 import { getWidth } from '../helpers/ScreenDimensions';
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   touchable: {
-    height: 250,
+    height: 300,
     width: imageWidth,
 
   },
@@ -22,6 +22,11 @@ const styles = StyleSheet.create({
   image: {
     height: 200,
     width: '100%',
+  },
+  priceContainer: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   textContainer: {
     padding: paddingSmall,
@@ -50,8 +55,12 @@ export default function ProductListItem(props: Props) {
     >
       <Image style={styles.image} source={{ uri: props.image }} resizeMode="cover" />
       <View style={styles.textContainer}>
-        <H3 style={styles.text}>{props.price}</H3>
-        <Text>{props.title}</Text>
+        <View style={styles.priceContainer}>
+          <H2 style={styles.text}>{props.price}</H2>
+          <Icon name="md-heart-outline" />
+
+        </View>
+        <H3>{props.title}</H3>
         <Text>{props.subTitle}</Text>
       </View>
     </TouchableOpacity>

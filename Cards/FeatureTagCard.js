@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
-import { Text, H3 } from 'native-base';
+import { Text, H3, H2 } from 'native-base';
 
 import { appStyles } from '../config/AppColors';
 import { paddingMedium, paddingSmall } from '../config/Styles';
@@ -69,8 +69,8 @@ export default function FeatureTagCard(props: Props) {
       >
         <Image style={styles.image} source={{ uri: props.features[1].image }} resizeMode="cover" />
         <View style={styles.textContainer}>
-          <H3 style={styles.text}>{props.features[1].title}</H3>
-          <Text>{props.features[1].subTitle}</Text>
+          <H2 style={styles.text}>{props.features[1].title}</H2>
+          <H3>{props.features[1].subTitle}</H3>
         </View>
       </TouchableOpacity>
     </View>

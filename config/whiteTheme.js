@@ -1,6 +1,7 @@
 import color from "color";
 
 import { Platform, Dimensions, PixelRatio } from "react-native";
+import {appStyles} from "./AppColors";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -110,10 +111,10 @@ export default {
     return this.fontSizeBase * 1.8;
   },
   get fontSizeH2() {
-    return this.fontSizeBase * 1.6;
+    return this.fontSizeBase * 1.4;
   },
   get fontSizeH3() {
-    return this.fontSizeBase * 1.4;
+    return this.fontSizeBase * 1.2;
   },
 
   // Footer
@@ -222,7 +223,7 @@ export default {
   tabFontSize: 15,
 
   // Text
-  textColor: "#000",
+  textColor: appStyles.textDark,
   inverseTextColor: "#fff",
   noteFontSize: 14,
   get defaultTextColor() {

@@ -4,7 +4,7 @@ const appColors = {
   lightGrey: 'lightgrey',
   blue: '#4080f4',
   black: 'black',
-
+charcoal: '#606060',
 };
 
 export const appStyles = {
@@ -12,7 +12,7 @@ export const appStyles = {
   cardColor: appColors.white,
   brandColor: appColors.blue,
   separatorColor: appColors.lightGrey,
-  textDark: appColors.black,
+  textDark: appColors.charcoal,
   textInverse: appColors.white,
     headerBarColor: appColors.white,
     headerBarIconColor: appColors.black,
