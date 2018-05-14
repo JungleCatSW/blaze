@@ -6,6 +6,7 @@ import { Text, H3 } from 'native-base';
 import { appStyles } from '../config/AppColors';
 import { paddingMedium, paddingSmall } from '../config/Styles';
 import { getWidth } from '../helpers/ScreenDimensions';
+import { navigateToProductListByTag } from '../navigation/NavigationHelper';
 
 const imageWidth = (getWidth() / 2) - paddingMedium - (paddingMedium / 2);
 
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
 
 type Props = {
    features: Array<Object>,
-    navigateToTag: Function,
+    navigation: Object,
 }
 
 export default function FeatureTagCard(props: Props) {
@@ -54,7 +55,7 @@ export default function FeatureTagCard(props: Props) {
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.touchableLeft}
-        onPress={() => { props.navigateToTag(props.features[0].tag); }}
+        onPress={() => { navigateToProductListByTag(props.navigation, props.features[0].tag, props.features[0].tagName); }}
       >
         <Image style={styles.image} source={{ uri: props.features[0].image }} resizeMode="cover" />
         <View style={styles.textContainer}>
@@ -64,7 +65,7 @@ export default function FeatureTagCard(props: Props) {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.touchableRight}
-        onPress={() => { props.navigateToTag(props.features[0].tag); }}
+        onPress={() => { navigateToProductListByTag(props.navigation, props.features[1].tag, props.features[1].tagName); }}
       >
         <Image style={styles.image} source={{ uri: props.features[1].image }} resizeMode="cover" />
         <View style={styles.textContainer}>

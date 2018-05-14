@@ -2,27 +2,32 @@ export const promo = [
   {
     image: 'https://github.com/JungleCatSW/rcrn-support/raw/master/pexels-photo-206470.jpeg',
     tag: 'autumnsale',
+    tagName: 'Autumn',
   },
   {
     image: 'https://github.com/JungleCatSW/rcrn-support/raw/master/pexels-photo-298863.jpeg',
     tag: 'newsmartwear',
+    tagName: 'Smartwear',
   },
   {
     image: 'https://github.com/JungleCatSW/rcrn-support/raw/master/pexels-photo-908309.jpeg',
     tag: ' High Shoes',
+    tagName: 'High Shoes',
   },
 ];
 
 export const features1 = [
   {
     image: 'https://github.com/JungleCatSW/rcrn-support/raw/master/pexels-photo-899120.jpeg',
-    tag: 'autumnsale',
+    tag: 'newandhot',
+    tagName: 'Hot trend',
     title: 'New In',
     subTitle: 'The hottest new trends',
   },
   {
     image: 'https://github.com/JungleCatSW/rcrn-support/raw/master/pexels-photo-932405.jpeg',
-    tag: 'newsmartwear',
+    tag: 'tartan',
+    tagName: 'Tartan',
     title: 'Check',
     subTitle: 'Best new Plaid and Tartan',
   },
