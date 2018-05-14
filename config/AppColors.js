@@ -8,7 +8,7 @@ const appColors = {
 };
 
 export const appStyles = {
-  backgroundColor: appColors.lightGrey,
+  backgroundColor: appColors.white,
   cardColor: appColors.white,
   brandColor: appColors.blue,
   separatorColor: appColors.lightGrey,

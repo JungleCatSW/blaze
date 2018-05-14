@@ -5,13 +5,18 @@
  */
 
 import React, { Component } from 'react';
+import { StyleProvider } from 'native-base';
 import StackNavigator from './navigation/Navigator';
+import getTheme from './native-base-theme/components';
+import whiteTheme from './config/whiteTheme';
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <StackNavigator />
+      <StyleProvider style={getTheme(whiteTheme)}>
+        <StackNavigator />
+      </StyleProvider>
     );
   }
 }

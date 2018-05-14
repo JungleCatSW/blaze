@@ -34,7 +34,7 @@ export default class AppHeader extends React.Component {
             light
             onPress={leftAction}
           >
-            <Icon name={iconName} style={{ fontSize: 32, color: appStyles.headerBarIconColor }} />
+            <Icon name={iconName} style={{ color: appStyles.headerBarIconColor }} />
           </Button>
         );
       }
@@ -49,7 +49,7 @@ export default class AppHeader extends React.Component {
           transparent
           onPress={() => {}}
         >
-          <Icon name="search" style={{ fontSize: 32 , color: appStyles.headerBarIconColor }} />
+          <Icon name="search" style={{ color: appStyles.headerBarIconColor }} />
         </Button>
       );
     }
@@ -64,6 +64,7 @@ export default class AppHeader extends React.Component {
           }}
           />
           <Header
+            noShadow
             style={{ backgroundColor: appStyles.headerBarColor }}
             androidStatusBarColor={appStyles.statusBarColor}
           >

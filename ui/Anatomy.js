@@ -15,6 +15,7 @@ import {
 
 import { NavigationActions } from 'react-navigation';
 import AppHeader from './AppHeader';
+import {appStyles} from "../config/AppColors";
 
 const defaultDrawerContent = <View style={{ backgroundColor: 'white', flex: 1 }}><Text>Use drawerContent props to put something here</Text></View>;
 
@@ -60,7 +61,7 @@ export default class Anatomy extends React.Component {
           showLeftButton={this.props.showLeftButton}
           title={this.props.title}
         />
-        <Container>
+        <Container style={{backgroundColor:appStyles.backgroundColor}}>
           <Content
             ref={(c) => {
             //  this.contentScroll = c;

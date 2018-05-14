@@ -1,7 +1,10 @@
 // @flow
 import React from 'react';
+import { View } from 'react-native';
 import { Text } from 'native-base';
+import Swiper from 'react-native-swiper';
 import Anatomy from '../ui/Anatomy';
+
 
 type Props = {
     navigation: any,
@@ -23,7 +26,7 @@ export default class ProductDetailScreen extends React.Component<Props, State> {
           title="Detail"
           navigation={this.props.navigation}
         >
-          <Text>ProductDetail screen</Text>
+          <View />
         </Anatomy>
       );
     }
