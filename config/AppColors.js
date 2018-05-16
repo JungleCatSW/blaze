@@ -4,7 +4,7 @@ const appColors = {
   lightGrey: 'lightgrey',
   blue: '#4080f4',
   black: 'black',
-charcoal: '#606060',
+  charcoal: '#606060',
 };
 
 export const appStyles = {
@@ -14,9 +14,9 @@ export const appStyles = {
   separatorColor: appColors.lightGrey,
   textDark: appColors.charcoal,
   textInverse: appColors.white,
-    headerBarColor: appColors.white,
-    headerBarIconColor: appColors.black,
-    statusBarColor: appColors.blue,
-    statusBarIconColor: appColors.black,
+  headerBarColor: appColors.white,
+  headerBarIconColor: appColors.black,
+  statusBarColor: appColors.blue,
+  statusBarIconColor: appColors.black,
 
 };

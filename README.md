@@ -70,6 +70,8 @@ react native render html
 yarn add jsdom jsdom-global react-dom react-test-renderer sinon enzyme enzyme-adapter-react-16 enzyme-to-json --dev
 ```
 Jest
+npm run test -- -u
+
 Sinon
 Enzyme
 
