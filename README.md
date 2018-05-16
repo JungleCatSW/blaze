@@ -40,6 +40,7 @@ yarn add eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y
 Prettier https://stackoverflow.com/questions/46201647/prettier-airbnbs-eslint-config
 ## Flow
 https://medium.com/react-native-training/getting-started-with-react-native-and-flow-d40f55746809
+https://www.jetbrains.com/help/webstorm/using-the-flow-type-checker.html
 ```
 yarn add flow-bin@0.33.0 --dev
 ```

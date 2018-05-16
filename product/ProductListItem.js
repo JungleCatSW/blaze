@@ -5,6 +5,7 @@ import { Text, H3 } from 'native-base';
 
 import { paddingMedium, paddingSmall } from '../config/Styles';
 import { getWidth } from '../helpers/ScreenDimensions';
+import { navigateToProductDetailById } from '../navigation/NavigationHelper';
 
 const imageWidth = (getWidth() / 2) - paddingMedium - (paddingMedium / 2);
 
@@ -38,21 +39,21 @@ type Props = {
     title: string,
     subTitle: string,
     price: string,
-    navigateToProduct: Function,
+    navigation: Object,
 }
 
-export default function FeatureTagCard(props: Props) {
+export default function ProductListItem(props: Props) {
   return (
     <TouchableOpacity
       style={styles.touchable}
-      onPress={() => { props.navigateToProduct(props.id); }}
+      onPress={() => { navigateToProductDetailById(props.navigation, props.id); }}
     >
       <Image style={styles.image} source={{ uri: props.image }} resizeMode="cover" />
       <View style={styles.textContainer}>
         <H3 style={styles.text}>{props.price}</H3>
         <Text>{props.title}</Text>
+        <Text>{props.subTitle}</Text>
       </View>
     </TouchableOpacity>
-
   );
 }
