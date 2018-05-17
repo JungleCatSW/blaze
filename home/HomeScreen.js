@@ -41,6 +41,11 @@ const mainDrawerRoutes = [
     route: 'HelpScreen',
     icon: 'help-circle',
   },
+  {
+    label: 'TagsTest',
+    route: 'TagsTestScreen',
+    icon: 'help-circle',
+  },
 ];
 
 type Props = {

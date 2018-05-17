@@ -1,4 +1,7 @@
 // first two levels of tags are grabbed
+import gql from 'graphql-tag';
+
+export default gql`
 {
     tags(shopId: "cmVhY3Rpb24vc2hvcDpKOEJocTN1VHRkZ3daeDNyeg==", isTopLevel: true) {
     edges {
@@ -21,7 +24,7 @@
         }
     }
 }
-}
+}`;
 
 // {
 //     tags(shopId:"cmVhY3Rpb24vc2hvcDpKOEJocTN1VHRkZ3daeDNyeg==", isTopLevel:true) {
