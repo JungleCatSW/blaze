@@ -2,28 +2,34 @@
 import gql from 'graphql-tag';
 
 export default gql`
-{
-    tags(shopId: "cmVhY3Rpb24vc2hvcDpKOEJocTN1VHRkZ3daeDNyeg==", isTopLevel: true) {
-    edges {
-        cursor
-        node {
-            _id
-            name
-            position
-            slug
-            subTags {
-                edges {
-                    node {
-                        _id
-                        name
-                        position
-                        slug
+query MenuTagsQuery($shopId: ID!){
+    tags(shopId: $shopId, isTopLevel: true)
+    {
+        edges
+        {
+            cursor
+            node
+            {
+                _id
+                name
+                position
+                slug
+                subTags
+                {
+                    edges
+                    {
+                        node
+                        {
+                            _id
+                            name
+                            position
+                            slug
+                        }
                     }
                 }
             }
         }
     }
-}
 }`;
 
 // {
