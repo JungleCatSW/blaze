@@ -1,3 +1,7 @@
+
+[![Build status](https://build.appcenter.ms/v0.1/apps/2b2fc125-a76b-46af-b449-5da50922500b/branches/master/badge)](https://appcenter.ms)
+
+
 #Config
 renaming app
 package name
