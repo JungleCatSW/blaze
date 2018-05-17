@@ -2,6 +2,8 @@
 renaming app
 package name
 url for rc
+shop Key
+
 
 #quick comands
 yarn install or npm install
@@ -62,7 +64,7 @@ Push Notifications
 # Server config
 plugin
 react native render html
-
+admin@localhost r3@cti0n
 #Image and video caching
 
 #Testing
