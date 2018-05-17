@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import StackNavigator from './navigation/Navigator';
 import { ApolloProvider } from 'react-apollo';
+import StackNavigator from './navigation/Navigator';
 import { client } from './graphql/GQLClient';
 
 type Props = {};
