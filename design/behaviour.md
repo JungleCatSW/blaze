@@ -23,8 +23,8 @@ Will provide route to:
 1. Basket
 1. Saved Items
 1. Account
-1. Settings
-1. Help/ Info
+1. Settings (probably not needed)
+1. Help/ Info (TDB) possible external web link
 1. Rate/ Share/ Feedback TBD
 1. Sign Out (just a button)
 
@@ -81,9 +81,27 @@ Can move to basket, view ProductDetail, delete,
 # Account Screen
 Provides a menu to other areas:
 1. Order History
-1. 
+1. My info / name / email etc..
+1. Password update ?
+1. Address(es)
+1. Payment Methods
 
 
+## Order History List
+List of order overviews -> navs to order detail screen
+## Order Detail Screen
+List of ordered items,
+Address sent to
+Payment method
+Date / Status
 
-# Checkout
+# Checkout Flow SC
+TBD..
+
+#Marketing
+## Analytics
+- events nav to screen, view/filter tag, search, save item, add to basket, checkout, open app,
+
+## Push Notifications
+configurable from plugin...
 
