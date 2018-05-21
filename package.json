@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "flow && jest",
+    "jest": "jest",
     "flow": "flow"
   },
   "dependencies": {
@@ -41,6 +42,12 @@
     "sinon": "^5.0.7"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|native-base|react-navigation|redux-persist|expo|@expo/vector-icons|react-test-renderer)"
+    ]
   }
 }

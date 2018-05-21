@@ -8,50 +8,11 @@ import PromoTagCard from '../Cards/PromoTagCard';
 import { features1, features2, promo } from './mockData';
 import FeatureTagCard from '../Cards/FeatureTagCard';
 import { paddingMedium } from '../config/Styles';
-
-
-const mainDrawerRoutes = [
-  {
-    label: 'Home',
-    route: 'HomeScreen',
-    icon: 'home',
-  },
-  {
-    label: 'My Cart',
-    route: 'CartScreen',
-    icon: 'cart',
-  },
-  {
-    label: 'Saved',
-    route: 'SavedScreen',
-    icon: 'heart',
-  },
-  {
-    label: 'Account',
-    route: 'AccountScreen',
-    icon: 'contact',
-  },
-  {
-    label: 'Settings',
-    route: 'SettingsScreen',
-    icon: 'settings',
-  },
-  {
-    label: 'Help',
-    route: 'HelpScreen',
-    icon: 'help-circle',
-  },
-  {
-    label: 'TagsTest',
-    route: 'TagsTestScreen',
-    icon: 'help-circle',
-  },
-];
+import { mainDrawerRoutes } from './tests/drawerRoutes';
 
 type Props = {
     navigation: any,
 };
-
 
 export default class HomeScreen extends React.Component<Props> {
   navigateToRoute = (route : string) => {
