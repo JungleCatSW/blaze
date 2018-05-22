@@ -23,12 +23,13 @@ const styles = StyleSheet.create({
 
 export default function DrawerBanner() {
   return (
-    <ImageBackground style={styles.imageBackground}source={bannerBackgroundImage}>
+    <ImageBackground
+      style={styles.imageBackground}
+      source={bannerBackgroundImage}
+    >
       <TouchableOpacity style={styles.container}>
         <H1 style={styles.text}>{shopName}</H1>
-
         <Text style={styles.text}>Sign In</Text>
-
       </TouchableOpacity>
     </ImageBackground>
   );
