@@ -1,4 +1,5 @@
 import { StackActions, NavigationActions } from 'react-navigation';
+import type { Tag } from '../types/types';
 
 export function resetNavigation(navigation : Object, routeName : string) {
   const resetAction = StackActions.reset({
@@ -17,7 +18,14 @@ export function navigateToProductListByTag(navigation : Object, tag : string, ta
 }
 
 export function navigateToProductDetailById(navigation : Object, id : string) {
-    navigation.push('ProductDetailScreen', {
-        id,
-    });
+  navigation.push('ProductDetailScreen', {
+    id,
+  });
+}
+
+// TODO make the screen for this!
+export function navigateToTagsListByTag(navigation : Object, tag: Tag) {
+  navigation.push('TagsListScreen', {
+    tag,
+  });
 }
