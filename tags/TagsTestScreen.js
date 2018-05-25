@@ -19,8 +19,7 @@ export default class TagsTestScreen extends React.Component {
         <Query query={MenuTagsQuery} variables={{ shopId: SHOP_ID }}>
           {({ loading, error, data }) => {
               if (loading) return <Text>Loading...</Text>;
-              if (error) return <Text>Error :( {JSON.stringify(error)}</Text>;
-
+              if (error) return <Text>Error</Text>;
               return data.tags.edges.map(({ node }) => (
                 <Text key={node._id}>
                   {node.name}

@@ -8,7 +8,7 @@ import PromoTagCard from '../Cards/PromoTagCard';
 import { features1, features2, promo } from './mockData';
 import FeatureTagCard from '../Cards/FeatureTagCard';
 import { paddingMedium } from '../config/Styles';
-
+import TopLevelTagsList from './TopLevelTagsList';
 
 const mainDrawerRoutes = [
   {
@@ -86,9 +86,6 @@ renderFeed = () => {
   );
 };
 
-renderTopLevelTags = () => {
-
-};
 
 render() {
   return (
@@ -101,15 +98,13 @@ render() {
       />}
     >
       <Tabs initialPage={1}>
-        <Tab heading="Tab1">
+        <Tab heading="Home">
           {this.renderFeed()}
         </Tab>
-        <Tab heading="Tab2">
-          {this.renderTopLevelTags()}
+        <Tab heading="Tags">
+          <TopLevelTagsList />
         </Tab>
       </Tabs>
-
-
     </Anatomy>
   );
 }
