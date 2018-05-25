@@ -43,9 +43,7 @@ This will provide a list of tags at the top level, to form a hierarchical browsi
 and products aren't forced into a systematic hierarchy so they can be any number of layers deep, or products may occur 
 only at the top level. 
 
-So the list item component will need to have two options, one to view every thing at the top level, and one to go 
-further down to the next level. Although, it is quite likely that the app will only support two levels (top and second),
-and that further filtering should be done in the filter drawer on the ProductsListScreen.
+Top level categories go directly to a product list, that can be filtered by sub tags.
 
 GQL tags: the whole tag tree can't be collected by gql in one go. so the top two levels are queried and used to build the menu.
 
