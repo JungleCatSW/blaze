@@ -1,14 +1,13 @@
 // @flow
-
 import React from 'react';
-import { TouchableOpacity, View, Stylesheet } from 'react-native';
+import { TouchableOpacity, View, StyleSheet } from 'react-native';
 import { H2, Icon } from 'native-base';
 import type { Tag } from '../types/types';
 import { appStyles } from '../config/AppColors';
 import { navigateToProductListByTag } from '../navigation/NavigationHelper';
 
 // this is a full width list item, with an optional image
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   container: {
     backgroundColor: appStyles.cardColor,
     width: '100%',
