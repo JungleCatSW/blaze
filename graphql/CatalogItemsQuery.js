@@ -1,6 +1,8 @@
+import gql from 'graphql-tag';
 // https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/graphql/lib/queries/getCatalogItems.js
-{
-    catalogItems(shopIds: ["cmVhY3Rpb24vc2hvcDpKOEJocTN1VHRkZ3daeDNyeg=="]) {
+export default gql`
+query CatalogItemsQuery($shopId: [ID]!){
+    catalogItems(shopIds:$shopId) {
     edges {
         node {
             createdAt
@@ -11,17 +13,13 @@
                 product {
                     _id
                     title
+                    pageTitle
                     slug
                     description
                     vendor
                     isLowQuantity
                     isSoldOut
                     isBackorder
-                    shop {
-                        currency {
-                            code
-                        }
-                    }
                     pricing {
                         currency {
                             code
@@ -34,8 +32,6 @@
                         URLs {
                             thumbnail
                             small
-                            medium
-                            large
                         }
                     }
                 }
@@ -43,5 +39,5 @@
         }
     }
 }
-
 }
+`;

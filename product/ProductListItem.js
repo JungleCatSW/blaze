@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    height: 200,
+    height: 160,
     width: '100%',
   },
   textContainer: {
@@ -41,7 +41,9 @@ type Props = {
     price: string,
     navigation: Object,
 }
-
+// todo soldout
+// todo low quantity
+//
 export default function ProductListItem(props: Props) {
   return (
     <TouchableOpacity

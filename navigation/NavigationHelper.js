@@ -1,6 +1,6 @@
 import { StackActions, NavigationActions } from 'react-navigation';
 
-export function resetNavigation(navigation : Object, routeName : string) {
+export function resetNavigation(navigation: Object, routeName: string) {
   const resetAction = StackActions.reset({
     index: 0,
     actions: [NavigationActions.navigate({ routeName })],
@@ -8,7 +8,7 @@ export function resetNavigation(navigation : Object, routeName : string) {
   navigation.dispatch(resetAction);
 }
 
-export function navigateToProductListByTag(navigation : Object, tag : string, tagName: string) {
+export function navigateToProductListByTag(navigation: Object, tag: string, tagName: string) {
   // Push creates a new instance, params will be read
   navigation.push('ProductListScreen', {
     tag,
@@ -16,8 +16,8 @@ export function navigateToProductListByTag(navigation : Object, tag : string, ta
   });
 }
 
-export function navigateToProductDetailById(navigation : Object, id : string) {
-    navigation.push('ProductDetailScreen', {
-        id,
-    });
+export function navigateToProductDetailById(navigation: Object, id: string) {
+  navigation.push('ProductDetailScreen', {
+    id,
+  });
 }

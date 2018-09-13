@@ -5,6 +5,7 @@ import InitialRouter from './InitialRouter';
 import ProductListScreen from '../product/ProductListScreen';
 import ProductDetailScreen from '../product/ProductDetailScreen';
 import TagsTestScreen from '../tags/TagsTestScreen';
+import CatalogItemsTestScreen from '../product/CatalogItemsTestScreen';
 
 export default StackNavigator({
 
@@ -14,6 +15,7 @@ export default StackNavigator({
   ProductDetailScreen: { screen: ProductDetailScreen },
   InitialRouter: { screen: InitialRouter },
   TagsTestScreen: { screen: TagsTestScreen },
+  CatalogItemsTestScreen: { screen: CatalogItemsTestScreen},
 }, {
   initialRouteName: 'InitialRouter',
   headerMode: 'none',
