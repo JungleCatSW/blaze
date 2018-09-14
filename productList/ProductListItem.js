@@ -5,7 +5,7 @@ import { Text, H3 } from 'native-base';
 
 import { paddingMedium, paddingSmall } from '../config/Styles';
 import { getWidth } from '../helpers/ScreenDimensions';
-import { navigateToProductDetailById } from '../navigation/NavigationHelper';
+import { navigateToProductDetailBySlug } from '../navigation/NavigationHelper';
 
 const imageWidth = (getWidth() / 2) - paddingMedium - (paddingMedium / 2);
 
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
 
 type Props = {
     image: string,
-    id: string,
+    slug: string,
     title: string,
     subTitle: string,
     price: string,
@@ -48,7 +48,9 @@ export default function ProductListItem(props: Props) {
   return (
     <TouchableOpacity
       style={styles.touchable}
-      onPress={() => { navigateToProductDetailById(props.navigation, props.id); }}
+      onPress={() => {
+                navigateToProductDetailBySlug(props.navigation, props.slug, props.title);
+            }}
     >
       <Image style={styles.image} source={{ uri: props.image }} resizeMode="cover" />
       <View style={styles.textContainer}>

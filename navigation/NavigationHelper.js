@@ -16,8 +16,9 @@ export function navigateToProductListByTag(navigation: Object, tag: string, tagN
   });
 }
 
-export function navigateToProductDetailById(navigation: Object, id: string) {
+export function navigateToProductDetailBySlug(navigation: Object, slug: string, title: string) {
   navigation.push('ProductDetailScreen', {
-    id,
+    slug,
+    title,
   });
 }
