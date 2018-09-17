@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
-import { Text, H3 } from 'native-base';
+import { Text, Accordion } from 'native-base';
 
 
 type Props = {
@@ -20,13 +20,12 @@ export default class Description extends React.Component<Props, State> {
     state = {
       expanded: false,
     };
-// https://docs.nativebase.io/Components.html#accordion-def-headref
+  // https://docs.nativebase.io/Components.html#accordion-def-headref
     render() {
+      const data = [{ title: 'Description', content: this.props.description }];
       return (
         <View>
-          <Text>
-            {this.props.description}
-          </Text>
+          {/*<Accordion dataArray={data} />*/}
         </View>
       );
     }
