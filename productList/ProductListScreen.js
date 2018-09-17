@@ -51,7 +51,6 @@ export default class ProductListScreen extends React.Component<Props, State> {
         },
       },
     }) {
-      console.log(_id);
       return (<ProductListItem
         image={primaryImage ? primaryImage.URLs.thumbnail : PLACEHOLDER}
             // todo this can change to grey tile ?
@@ -66,7 +65,6 @@ export default class ProductListScreen extends React.Component<Props, State> {
     // TODO implement as filterable flat list
     // https://facebook.github.io/react-native/docs/flatlist.htmls
     renderList(products) {
-      console.log(products);
       return (<FlatList
         data={products}
         keyExtractor={(item) => item.node.product._id}

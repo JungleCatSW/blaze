@@ -20,7 +20,7 @@ export default class Description extends React.Component<Props, State> {
     state = {
       expanded: false,
     };
-
+// https://docs.nativebase.io/Components.html#accordion-def-headref
     render() {
       return (
         <View>

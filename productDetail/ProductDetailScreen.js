@@ -20,8 +20,7 @@ const styles = StyleSheet.create({
     marginRight: paddingMedium,
   },
   page: {
-    paddingTop: paddingMedium,
-    paddingBottom: paddingMedium,
+    padding: paddingMedium,
   },
 });
 
@@ -42,7 +41,7 @@ export default class ProductDetailScreen extends React.Component<Props, State> {
 
     renderDetail(product) {
       return (
-        <View style={styles.page}>
+        <View>
           <Text>{product.title}</Text>
             <Description description={product.description}/>
           <Variant navigation={this.props.navigation} variants={product.variants} />
@@ -56,7 +55,7 @@ export default class ProductDetailScreen extends React.Component<Props, State> {
           title={this.state.title}
           navigation={this.props.navigation}
         >
-          <View>
+          <View style={styles.page}>
             <Query query={ProductQuery} variables={{ slug: this.state.slug }}>
               {({ loading, error, data }) => {
                             if (loading) return <Text>Loading...</Text>;
