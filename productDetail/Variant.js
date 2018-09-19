@@ -47,6 +47,19 @@ export default class Variant extends React.Component<Props, State> {
     };
     // TODO store selected ID or model, check if valid or needs option selected
 
+    constructor(props) {
+      super(props);
+      // this.setState({options: props.variants})
+    }
+
+    onPressVariant = (variantIndex, options) => {
+      this.setState({ variantIndex, options, optionIndex: 0 });
+    }
+
+    onPressOption = (optionIndex) => {
+      this.setState({ optionIndex });
+    }
+
     renderOptionItem({ index, item: { title, variantId, optionTitle } }) {
       const style = !(index % 2) ? styles.variantButtonLeft : styles.variantButtonRight;
       const selected = this.state.optionIndex === index;
@@ -58,7 +71,7 @@ export default class Variant extends React.Component<Props, State> {
       ><Text>{optionTitle}</Text>
               </Button>);
     }
-// TODO separator
+  // TODO separator
     // TODO maybe these ont exist
     renderOptions() {
       return (<FlatList
@@ -73,13 +86,6 @@ export default class Variant extends React.Component<Props, State> {
       />);
     }
 
-    onPressVariant = (variantIndex, options) => {
-      this.setState({ variantIndex, options, optionIndex: 0 });
-    }
-
-    onPressOption = (optionIndex) => {
-      this.setState({ optionIndex });
-    }
 
     // TODO isSoldOut = disbled
     // TODO Low stock different color / badge

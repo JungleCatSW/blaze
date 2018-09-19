@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Text } from 'native-base';
+import { Text, H2 } from 'native-base';
 import { StyleSheet, View } from 'react-native';
 import { Query } from 'react-apollo';
 import Anatomy from '../ui/Anatomy';
@@ -9,7 +9,9 @@ import CatalogItemsQuery from '../graphql/CatalogItemsQuery';
 import { SHOP_ID } from '../config/api';
 import { paddingMedium } from '../config/Styles';
 import ProductQuery from '../graphql/ProductQuery';
-import Description from "./Description";
+import Description from './Description';
+import Title from "./Title";
+import ImageGallery from "./ImageGallery";
 
 const styles = StyleSheet.create({
   container: {
@@ -40,11 +42,15 @@ export default class ProductDetailScreen extends React.Component<Props, State> {
     };
 
     renderDetail(product) {
+        console.log(product)
       return (
         <View>
-          <Text>{product.title}</Text>
-            <Description description={product.description}/>
+          <ImageGallery />
+            <View style={styles.page}>
+          <Title title={product.title} subTitle={product.pageTitle}/>
           <Variant navigation={this.props.navigation} variants={product.variants} />
+          <Description description={product.description} />
+            </View>
         </View>);
     }
 
@@ -55,7 +61,7 @@ export default class ProductDetailScreen extends React.Component<Props, State> {
           title={this.state.title}
           navigation={this.props.navigation}
         >
-          <View style={styles.page}>
+
             <Query query={ProductQuery} variables={{ slug: this.state.slug }}>
               {({ loading, error, data }) => {
                             if (loading) return <Text>Loading...</Text>;
@@ -64,7 +70,7 @@ export default class ProductDetailScreen extends React.Component<Props, State> {
                         }
                         }
             </Query>
-          </View>
+
         </Anatomy>
       );
     }
