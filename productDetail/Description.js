@@ -1,8 +1,8 @@
 // @flow
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { Accordion } from 'native-base';
-import { paddingMedium, paddingSmall, topSeparator } from '../config/Styles';
+import { paddingSmall, topSeparator } from '../config/Styles';
 
 type Props = {
     // navigation: any,

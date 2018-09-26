@@ -75,7 +75,7 @@ export default class Variant extends React.Component<Props, State> {
 
     renderOptionItem({
       index, item: {
-        title, variantId, optionTitle, isSoldOut, pricing,
+        variantId, optionTitle, isSoldOut, pricing,
       },
     }) {
       const style = !(index % 2) ? styles.variantButtonLeft : styles.variantButtonRight;
@@ -87,7 +87,8 @@ export default class Variant extends React.Component<Props, State> {
         bordered={!selected}
         uppercase={false}
         onPress={() => this.onPressOption(index, variantId)}
-      ><Text>{optionTitle} {pricing[0].displayPrice}</Text>
+      >
+        <Text>{optionTitle} {pricing[0].displayPrice}</Text>
               </Button>);
     }
   // TODO separator
