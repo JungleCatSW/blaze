@@ -1,14 +1,15 @@
 import ApolloClient from 'apollo-boost';
 import { API_URL } from '../config/api';
+import { clientState } from './clientState';
 
 
 const defaultOptions = {
   watchQuery: {
-    fetchPolicy: 'network-only',
+    fetchPolicy: 'cache-and-network',
     errorPolicy: 'ignore',
   },
   query: {
-    fetchPolicy: 'network-only',
+    fetchPolicy: 'cache-and-network', //'network-only',
     errorPolicy: 'all',
   },
 };
@@ -16,4 +17,5 @@ const defaultOptions = {
 export const client = new ApolloClient({
   uri: API_URL,
   defaultOptions,
+  clientState,
 });

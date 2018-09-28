@@ -8,7 +8,8 @@ import PromoTagCard from '../Cards/PromoTagCard';
 import { features1, features2, promo } from './mockData';
 import FeatureTagCard from '../Cards/FeatureTagCard';
 import { paddingMedium } from '../config/Styles';
-
+import WrappedComponent from "./wrapTest";
+import WrappedComponent2 from "./mutateTest";
 
 const mainDrawerRoutes = [
   {
@@ -74,6 +75,8 @@ export default class HomeScreen extends React.Component<Props> {
         />}
       >
         <View style={{ paddingBottom: paddingMedium }}>
+          <WrappedComponent />
+          <WrappedComponent2 />
           <PromoTagCard
             tag={promo[0].tag}
             tagName={promo[0].tagName}
