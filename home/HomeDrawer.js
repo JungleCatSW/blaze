@@ -23,13 +23,14 @@ const styles = StyleSheet.create({
 type Props = {
     mainDrawerRoutes: Array<Object>,
     navigateToRoute: Function,
+    navigateToAuth: Function
 }
 
 export function HomeDrawer(props: Props) {
 // TODO add user model as props or connect via Apollo?
   return (
     <View style={styles.container}>
-      <DrawerBanner />
+      <DrawerBanner navigateToAuth={props.navigateToAuth} />
       {props.mainDrawerRoutes.map((drawerRoute) => {
           return (<DrawerListItem
             key={drawerRoute.route}

@@ -5,7 +5,6 @@ import { appStyles } from '../config/AppColors';
 import { bannerBackgroundImage, bannerHeight, shopName } from '../config/Brand';
 import { paddingMedium } from '../config/Styles';
 
-
 const styles = StyleSheet.create({
   container: {
     height: bannerHeight,
@@ -21,14 +20,16 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function DrawerBanner() {
+type Props = {
+  navigateToAuth: Function
+}
+
+export default function DrawerBanner({ navigateToAuth } : Props) {
   return (
     <ImageBackground style={styles.imageBackground}source={bannerBackgroundImage}>
-      <TouchableOpacity style={styles.container}>
+      <TouchableOpacity style={styles.container} onPress={navigateToAuth}>
         <H1 style={styles.text}>{shopName}</H1>
-
         <Text style={styles.text}>Sign In</Text>
-
       </TouchableOpacity>
     </ImageBackground>
   );

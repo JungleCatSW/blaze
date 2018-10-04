@@ -6,6 +6,7 @@ import ProductListScreen from '../productList/ProductListScreen';
 import ProductDetailScreen from '../productDetail/ProductDetailScreen';
 import TagsTestScreen from '../tags/TagsTestScreen';
 import CatalogItemsTestScreen from '../productList/CatalogItemsTestScreen';
+import AuthScreen from '../auth/AuthScreen';
 
 export default StackNavigator({
 
@@ -16,6 +17,7 @@ export default StackNavigator({
   InitialRouter: { screen: InitialRouter },
   TagsTestScreen: { screen: TagsTestScreen },
   CatalogItemsTestScreen: { screen: CatalogItemsTestScreen},
+  AuthScreen: { screen: AuthScreen}
 }, {
   initialRouteName: 'InitialRouter',
   headerMode: 'none',

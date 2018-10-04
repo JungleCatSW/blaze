@@ -22,3 +22,8 @@ export function navigateToProductDetailBySlug(navigation: Object, slug: string, 
     title,
   });
 }
+
+export function navigateToAuth(navigation: Object) {
+  // Push creates a new instance, params will be read
+  navigation.push('AuthScreen');
+}

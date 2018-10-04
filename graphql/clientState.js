@@ -15,9 +15,6 @@ const isReconcilingCarts = false;
 const stripeToken = null;
 
 export const clientState = {
-  defaults: {
-    isConnected: true,
-  },
   resolvers: {
     Mutation: {
       updateNetworkStatus: (_, { isConnected }, { cache }) => {
@@ -38,6 +35,18 @@ export const clientState = {
     networkStatus: {
       __typename: 'NetworkStatus',
       isConnected: 'poop',
+    },
+    account: {
+      __typename: 'Account',
+      _id: null,
+      name: null,
+    },
+    cart: {
+      __typename: 'Cart',
+      anonymousCartId: null,
+      anonymousCartToken: null,
+      accountCartId: null,
+      isReconcilingCarts: false,
     },
   },
 };

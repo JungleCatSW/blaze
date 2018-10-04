@@ -10,6 +10,7 @@ import FeatureTagCard from '../Cards/FeatureTagCard';
 import { paddingMedium } from '../config/Styles';
 import WrappedComponent from "./wrapTest";
 import WrappedComponent2 from "./mutateTest";
+import {navigateToAuth} from "../navigation/NavigationHelper";
 
 const mainDrawerRoutes = [
   {
@@ -72,6 +73,7 @@ export default class HomeScreen extends React.Component<Props> {
         drawerContent={<HomeDrawer
           mainDrawerRoutes={mainDrawerRoutes}
           navigateToRoute={this.navigateToRoute}
+          navigateToAuth={() => { navigateToAuth(this.props.navigation) }}
         />}
       >
         <View style={{ paddingBottom: paddingMedium }}>
